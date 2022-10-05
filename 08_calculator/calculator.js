@@ -23,6 +23,8 @@ const sum = function (array) {
    return sum;
 };
 
+// return array.reduce((total, current) => total + current);
+
 const multiply = function (array) {
    if (array.length === 0) {
       return 0;
@@ -36,10 +38,15 @@ const multiply = function (array) {
 
    return product;
 };
+// return array.length
+//    ? array.reduce((accumulator, nextItem) => accumulator * nextItem)
+//    : 0;
+// };
 
 const power = function (number, exponent) {
    return number ** exponent;
 };
+// return Math.pow(number, exponent);
 
 const factorial = function (number) {
    if (Number.isInteger(number) !== true || number < 0) {
@@ -50,6 +57,26 @@ const factorial = function (number) {
       return number * factorial(number - 1);
    }
 };
+
+/* 
+? Method 1
+const factorial = function(n) {
+   if (n === 0) return 1;
+   let product = 1;
+   for (let i = n; i > 0; i--) {
+      product *= i;
+   }
+   return product;
+};
+
+? Method 2 using recursion
+const recursiveFactorial = function(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * recursiveFactorial (n-1);
+};
+*/
 
 // Do not edit below this line
 module.exports = {
